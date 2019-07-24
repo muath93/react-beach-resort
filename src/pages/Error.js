@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Hero from '../components/Hero';
+import Banner from '../components/Banner';
 
 class Error extends Component {
   render() {
-    return <div>hello from Error page</div>;
+    return (
+      <Hero>
+        <Banner title="404" subtitle="Page not found">
+          <Link to="/" className="btn-primary">
+            return home
+          </Link>
+        </Banner>
+      </Hero>
+    );
   }
 }
 
