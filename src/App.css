@@ -213,6 +213,7 @@ h6 {
 /* Title */
 .section-title {
   text-align: center;
+  margin-top: 1rem;
   margin-bottom: 4rem;
 }
 .section-title h4 {
@@ -253,6 +254,7 @@ h6 {
 }
 .services h6 {
   letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
 }
 .services p {
   width: 80%;
