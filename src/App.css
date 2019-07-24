@@ -213,7 +213,6 @@ h6 {
 /* Title */
 .section-title {
   text-align: center;
-  margin-top: 1rem;
   margin-bottom: 4rem;
 }
 .section-title h4 {
@@ -232,7 +231,7 @@ h6 {
 
 /* services */
 .services {
-  padding: 5rem 0;
+  padding: 3.5rem 0;
 }
 .services {
   background: var(--darkGrey);
