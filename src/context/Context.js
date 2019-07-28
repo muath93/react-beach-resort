@@ -64,7 +64,7 @@ class RoomProvider extends Component {
     );
   };
   filterRooms = () => {
-    const {
+    let {
       rooms,
       type,
       capacity,
@@ -74,9 +74,18 @@ class RoomProvider extends Component {
       breakfast,
       pets
     } = this.state;
+    // all the rooms
     let tempRooms = [...rooms];
+    // convert capacity to number
+    capacity = +capacity;
+
+    // filter by type
     if (type !== 'all') {
       tempRooms = tempRooms.filter(room => room.type === type);
+    }
+    // filter by capacity
+    if (capacity !== 1) {
+      tempRooms = tempRooms.filter(room => room.capacity === capacity);
     }
     this.setState({ sortedRooms: tempRooms });
   };
