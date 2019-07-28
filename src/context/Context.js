@@ -91,6 +91,11 @@ class RoomProvider extends Component {
     // filter by price
     tempRooms = tempRooms.filter(room => room.price <= price);
 
+    // filter by size
+    tempRooms = tempRooms.filter(
+      room => room.size >= minSize && room.size <= maxSize
+    );
+
     // change state
     this.setState({ sortedRooms: tempRooms });
   };
