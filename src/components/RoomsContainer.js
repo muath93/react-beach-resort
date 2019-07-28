@@ -10,7 +10,6 @@ const RoomsContainer = () => {
     <RoomConsumer>
       {value => {
         const { loading, sortedRooms, rooms } = value;
-        console.log(value);
         return loading ? (
           <Loading />
         ) : (
