@@ -42,18 +42,49 @@ class SingleRoom extends Component {
       extras,
       breakfast,
       pets,
-      image
+      images
     } = room;
-    console.log(image);
-
     return (
-      <StyledHero img={image[0]}>
-        <Banner title={`${name} room`}>
-          <Link to="/rooms" className="btn-primary">
-            back to rooms
-          </Link>
-        </Banner>
-      </StyledHero>
+      <>
+        <StyledHero img={images[0]}>
+          <Banner title={`${name} room`}>
+            <Link to="/rooms" className="btn-primary">
+              back to rooms
+            </Link>
+          </Banner>
+        </StyledHero>
+        <section className="single-room">
+          <div className="single-room-images">
+            {images.map((image, i) => {
+              return <img key={i} src={image} alt={name} />;
+            })}
+          </div>
+          <div className="single-room-info">
+            <article className="desc">
+              <h3>details</h3>
+              <p> {description} </p>
+            </article>
+            <article className="info">
+              <h3>info</h3>
+              <h6>price : ${price}</h6>
+              <h6>size : {size} SQFT</h6>
+              <h6>
+                max capacity :
+                {capacity > 1 ? `${capacity} people` : `${capacity} person`}
+              </h6>
+              <h6>{pets ? 'pets allowd' : 'no pets allowd'}</h6>
+              <h6>{breakfast && 'free breakfast included'}</h6>
+            </article>
+          </div>
+        </section>
+        <section className="room-extras">
+          <ul className="extras">
+            {extras.map((item, i) => {
+              return <li key={i}>- {item} </li>;
+            })}
+          </ul>
+        </section>
+      </>
     );
   }
 }

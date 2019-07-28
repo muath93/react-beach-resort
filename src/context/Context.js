@@ -24,8 +24,8 @@ class RoomProvider extends Component {
   formatData = data => {
     const tempItems = items.map(item => {
       const id = item.sys.id;
-      const image = item.fields.images.map(image => image.fields.file.url);
-      const rooms = { ...item.fields, image, id };
+      const images = item.fields.images.map(image => image.fields.file.url);
+      const rooms = { ...item.fields, images, id };
       return rooms;
     });
     return tempItems;
