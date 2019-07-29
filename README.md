@@ -1,6 +1,6 @@
 ## React Beach Resort
 
-Built with react, react-router-dom, react context Api and styled-components.
+Built with react, react-router-dom, Context API and styled-components.
 
 In the project directory, you can run:
 
